@@ -6,6 +6,6 @@ variable float_ip_pool {
     type = string
     description = "Name of the Floating IP Pool"
 }
-variable instance_count {
-    default = 3
+variable node_count {
+    description = "number of nodes to stand up, generally and odd number"
 }
