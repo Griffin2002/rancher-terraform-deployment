@@ -1,9 +1,9 @@
 variable network {
-  type = string
+  type        = string
   description = "Name of the network"
 }
 variable pool_name {
-  type = string
+  type        = string
   description = "Name of the Floating IP Pool"
 }
 variable node_count {
