@@ -2,7 +2,7 @@ resource "openstack_compute_instance_v2" "nodes" {
     name = var.node_name
     image_id = var.image_id
     flavor_id = var.flavor_id
-    key_pair = var.key_pair
+    key_pair = openstack_compute_keypair_v2.deployer_keypair.name
     security_groups = ["default"]
 
     metadata = {
@@ -34,5 +34,9 @@ resource "openstack_compute_floatingip_v2" "fip" {
 resource "openstack_compute_floatingip_associate_v2" "nodes" {
     count = var.node_count
     floating_ip = openstack_compute_floatingip_v2.fip[count.index].address
-    instance_id = openstsack_compute_isntace_v2.nodes[count.index].id
+    instance_id = openstsack_compute_instace_v2.nodes[count.index].id
+}
+resource "openstack_compute_keypair_v2" "deployer_keypair" {
+    name = "deployer_keypair"
+    public_key = var.public_key
 }
