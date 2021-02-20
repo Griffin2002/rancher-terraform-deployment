@@ -3,7 +3,7 @@ resource "openstack_compute_instance_v2" "nodes" {
     image_id        = var.image_id
     flavor_id       = var.flavor_id
     key_pair        = openstack_compute_keypair_v2.deployer_keypair.name
-    security_groups = ["default", openstack_compute_secgroup_v2.rancher.id]
+    security_groups = ["default", openstack_networking_secgroup_v2.rke.id]
 
     metadata = {
         this = "that"
