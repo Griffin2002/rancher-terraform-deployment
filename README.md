@@ -1,3 +1,3 @@
-# rancher-terraform-deployment
+# Rancher-Terraform-deployment
 
-A custom project to deploy a rancher cluster utilizing Terraform.
+Custom terraform setup to build a cluster for rancher deployment
