@@ -157,7 +157,7 @@ resource "openstack_networking_secgroup_rule_v2" "rke_rule_17" {
   security_group_id = openstack_networking_secgroup_v2.rke.id
 }
 
-resource "openstack_networking_secgroup_rule_v2" "rke_rule_17" {
+resource "openstack_networking_secgroup_rule_v2" "rke_rule_18" {
   direction         = "egress"
   ethertype         = "IPv4"
   protocol          = "tcp"
